@@ -1,0 +1,170 @@
+
+
+.contacto {
+    background-color: rgb(27, 50, 87);
+    min-height: 100vh;
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+
+.hero-contacto {
+    text-align: center;
+    padding: 80px 20px 60px;
+    color: white;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 123, 255, 0.2) 100%);
+}
+
+.hero-contacto h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-contacto p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contenedor-contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-contacto {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjeta-info {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-info h3 {
+    color: #007bff; 
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-info p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.formulario-contacto {
+    flex: 1.5;
+    min-width: 300px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.campo-form {
+    margin-bottom: 25px;
+}
+
+.campo-form label {
+    display: block;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Azul consistente */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Azules consistentes */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4); /* Azul consistente */
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
