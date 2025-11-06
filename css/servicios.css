@@ -1,0 +1,100 @@
+/* Estilos para la página de servicios - Temática consistente */
+
+body {
+    background-color: rgb(27, 50, 87);
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+.encabezado {
+    background: linear-gradient(135deg, #000 0%, #003d82 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 50px;
+    animation: tituloEntrada 1s cubic-bezier(0.17, 0.84, 0.44, 1) both;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+@keyframes tituloEntrada {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.encabezado h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.encabezado p {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+.contenido-servicios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.tipos-servicios {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tipos-servicios:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30,58,138,0.3);
+    border-color: #2563eb;
+}
+
+.tipos-servicios h2 {
+    color: #2200ff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tipos-servicios p {
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tipos-servicios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tipos-servicios ul li {
+    color: #000000;
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tipos-servicios ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
