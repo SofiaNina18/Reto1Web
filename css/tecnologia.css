@@ -1,0 +1,191 @@
+
+
+body {
+    background-color: rgb(27, 50, 87);
+}
+
+/* Video de fondo */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+main {
+    padding-bottom: 90px;
+    position: relative;
+    z-index: 1;
+}
+
+.titulo {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 61, 130, 0.8) 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 60px;
+    animation: tituloEntrada 1s cubic-bezier(0.17, 0.84, 0.44, 1) both;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    z-index: 10;
+}
+
+@keyframes tituloEntrada {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.titulo p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+.tipos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6%;
+    margin-bottom: 60px;
+}
+
+.tipos > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.tipos-tecnologia {
+    margin-bottom: 50px;
+}
+
+.tipos-tecnologia > h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-left: 4px solid #007bff; 
+    padding-left: 20px;
+}
+
+.apartados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.caja {
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    border-color: #007bff; 
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+}
+
+.caja h4 {
+    color: #007bff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.caja p {
+    color: black;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.metodologia {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6%;
+    margin-bottom: 60px;
+}
+
+.metodologia > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.tipos-metodologia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.opciones-metodologia {
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.opciones-metodologia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #003d82, #007bff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.opciones-metodologia:hover::before {
+    transform: scaleX(1);
+}
+
+.opciones-metodologia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3); 
+}
+
+.opciones-metodologia .numero {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #007bff;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.opciones-metodologia h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.opciones-metodologia p {
+    color: black;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
