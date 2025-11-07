@@ -481,19 +481,19 @@ footer > a:hover {
 }
 
 @keyframes bajada {
-    0% {
+    from {
         transform: translateY(0);
     }
-    100% {
+    to {
         transform: translateY(-50%);
     }
 }
 
 @keyframes subida {
-    0% {
+    from {
         transform: translateY(-50%);
     }
-    100% {
+    to {
         transform: translateY(0);
     }
 }
