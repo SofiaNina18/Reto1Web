@@ -11,15 +11,16 @@ body {
     max-width: 100vw;
     background-color: rgb(27, 50, 87);
 }
+/*Encabezado*/
 header 
 {
     background-color: #000000; 
     display: flex;             
     align-items: center;       
-    justify-content: space-between;   /* logo left, nav right */
+    justify-content: space-between;  
     padding: 14px 80px;
     position: relative;
-    z-index: 1000; /* Mayor z-index para estar por encima de todo */        
+    z-index: 1000;      
 }
 header img 
 {
@@ -33,6 +34,7 @@ header a {
     left: auto;
 }
 
+/*Menu*/
 nav
 {
     display: flex;             
@@ -79,7 +81,6 @@ nav > ul > li:hover
     background-color: rgba(255,255,255,0.03);
 }
 
-/* Mostrar submenu usando visibility/opacity para evitar que desaparezca al mover el ratón */
 .tienda:hover > .MenuNivel2,
 .language:hover > .MenuNivel2
 {
@@ -91,12 +92,11 @@ nav > ul > li:hover
 
 .MenuNivel2
 {
-    /* Oculto por defecto mediante visibility/opacity para transiciones suaves */
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
     position: absolute;    
-    top: 100%; /* sin separación extra para evitar gap entre trigger y menú */
+    top: 100%; 
     left: 0;             
     color: white;         
     min-width: 180px;     
@@ -104,12 +104,12 @@ nav > ul > li:hover
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     overflow: hidden;
-    z-index: 999; /* más alto para evitar solapamientos */
+    z-index: 999;
     transform: translateY(4px);
     transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
 }
 
-/* Mantener visible el submenu cuando el cursor está sobre él (evita que desaparezca al mover el ratón) */
+
 .MenuNivel2:hover {
     visibility: visible;
     opacity: 1;
@@ -137,7 +137,7 @@ nav > ul > li:hover
     background-color: rgba(255,255,255,0.03);
 }
 
-/* Carets para indicar desplegables */
+
 .tienda > a::after,
 .language > a::after {
     content: "▾";
@@ -149,22 +149,53 @@ nav > ul > li:hover
     color: #ffffff;
 }
 
-.tienda:hover > a::after,
-.language:hover > a::after {
+.tienda:hover > a::after {
     transform: rotate(180deg);
 }
-
+/*Termina el menú*/
 /*Termina el encabezado*/
 
+/*Primera sección - Título principal con video de fondo*/
 .titulo-principal {
     text-align: center;
-    width: 100vw;
+    width: 2000px;
+    height: 800px;
     margin-left: calc(-50vw + 50%);
-    background: linear-gradient(135deg, #000 0%, #003d82 100%);
+    margin-bottom: 0;
     color: white;
-    padding: 60px 20px;
     position: relative;
-    box-shadow: 0 4px 15px rgb(54, 66, 238);
+    box-shadow: 0 8px 30px rgba(54, 66, 238, 0.9);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+
+.titulo-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    
+}
+
+.contenido-titulo {
+    position: relative;
+    z-index: 3;
+    padding-top: 250px;
     animation: tituloEntrada 1s cubic-bezier(0.17, 0.84, 0.44, 1) both;
     animation-play-state: running;
 }
@@ -181,13 +212,34 @@ nav > ul > li:hover
 }
 
 .titulo-principal h1 {
-    font-size: 50px;
-    margin: 0 auto 20px;
-    max-width: 1200px;
+    background: linear-gradient(90deg, #ffffff, #8ca7ff, #224eff, #e0dff8, white);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 9rem;
+    animation: fondo 6s linear infinite;
 }
 
+.contenido-titulo p {
+    color: white;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fondo {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+/*Termina el título principal con video de fondo*/  
+
+/*Pie de página*/
 footer {
-    background-color: #000000;
+    background-color: #3e3e3e;
     width: 100vw;
     max-width: 100%;
     position: fixed;
@@ -224,126 +276,357 @@ footer > a:last-child {
 footer > a:hover {
     color: #3b82f6;
 }
+/*Fin del pie de página*/
 
 
-/*Página de inicio*/
+/*Contenido*/
 .inicio {
-    padding: 0 6%;
-    max-width: 1000px;
-    height: 1060px;
-    margin: 0 auto 100px;
-    border-radius: 12px;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
 }
 
-.Soluciones-digitales {
+.soluciones-digitales {
+    width: 100vw;
+    background-color: rgb(27, 50, 87);
+    padding: 0;
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    z-index: 1;
+}
+
+.contenedor-soluciones {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido-texto {
     background-color: rgb(255, 255, 255);
-    padding: 40px 30px;
-    border-radius: 12px;
-    margin: 30px 0;
-    box-shadow: 0 4px 15px rgb(49, 49, 49);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    padding: 100px 120px;
+    border-radius: 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 600px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: aparecerDesdeAbajo 0.8s ease-out;
 }
 
-.Soluciones-digitales:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px rgb(54, 66, 238);
+@keyframes aparecerDesdeAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.Soluciones-digitales h2 {
-    font-size: 2rem;
+.contenido-texto:hover {
+    box-shadow: 0 15px 50px rgba(54, 66, 238, 0.3);
+}
+
+.texto-informacion {
+    flex: 1;
+    max-width: 700px;
+}
+
+.texto-informacion h2 {
+    font-size: 3.5rem;
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-weight: 700;
-    text-decoration: underline
+    text-decoration: underline;
+    animation: deslizarDerecha 0.6s ease-out 0.2s both;
 }
 
-.Soluciones-digitales p {
+@keyframes deslizarDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.texto-informacion p {
     color: black;
-    line-height: 1.6;
-    font-size: 1.05rem;
-    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    animation: deslizarDerecha 0.6s ease-out 0.4s both;
 }
 
-.botón-servicios {
+.imagen-laptop {
+    flex: 0 0 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: flotarLaptop 3s ease-in-out infinite;
+    margin: 50px;
+    filter: drop-shadow(10px 10px 4px black);
+}
+
+@keyframes flotarLaptop {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.imagen-laptop img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.imagen-laptop img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.boton-servicios {
     display: inline-block;
     background: #1e3a8a;
     color: #fff;
-    padding: 12px 24px;
+    padding: 18px 40px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(30,58,138,0.3);
+    animation: deslizarDerecha 0.6s ease-out 0.6s both;
 }
 
-.botón-servicios:hover {
+.boton-servicios:hover {
     background: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(30,58,138,0.4);
 }
 
 .testimonios {
-    background-color: rgb(255, 255, 255);
-    padding: 40px 30px;
-    border-radius: 12px;
-    margin: 30px 0;
-    border-left: 5px solid #1e3a8a;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    
-}
-
-.testimonios:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px rgb(54, 66, 238);
+    background-color: #000000;
+    padding: 80px 0;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    overflow: hidden;
 }
 
 .testimonios h2 {
-    font-size: 1.8rem;
-    color: black;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 60px;
     font-weight: 700;
-    text-decoration: underline;
+    text-align: center;
 }
 
-.testimonios blockquote {
-    background: rgba(35, 35, 35, 0.291);
-    padding: 25px;
-    border-radius: 8px;
-    color: black;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    font-style: italic;
-    margin: 0;
+.cuadricula-testimonios {
+    display: flex;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.testimonios cite {
-    display: block;
-    margin-top: 15px;
-    color: #3b82f6;
+.columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    will-change: transform;
+    animation-timing-function: linear;
+}
+
+/* Animaciones de testimonio */
+.columna-1 {
+    animation: bajada 50s linear infinite;
+}
+
+.columna-2 {
+    animation: subida 55s linear infinite;
+}
+
+.columna-3 {
+    animation: bajada 48s linear infinite;
+}
+
+.columna-4 {
+    animation: subida 52s linear infinite;
+}
+
+@keyframes bajada {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes subida {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.cuadricula-testimonios:hover .columna {
+    animation-play-state: paused;
+}
+
+/*Fin de animacion*/
+
+.tarjeta-testimonio {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px;
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+/*Efectos de colores en las tarjetas de testimonio*/
+.tarjeta-testimonio[data-color="azul"]:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="morado"]:hover {
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 8px 32px rgba(168, 85, 247, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="rosa"]:hover {
+    background: rgba(236, 72, 153, 0.15);
+    border-color: rgba(236, 72, 153, 0.5);
+    box-shadow: 0 8px 32px rgba(236, 72, 153, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="naranja"]:hover {
+    background: rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 8px 32px rgba(249, 115, 22, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="verde-azulado"]:hover {
+    background: rgba(20, 184, 166, 0.15);
+    border-color: rgba(20, 184, 166, 0.5);
+    box-shadow: 0 8px 32px rgba(20, 184, 166, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="rojo"]:hover {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.5);
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="verde"]:hover {
+    background: rgba(34, 197, 94, 0.15);
+    border-color: rgba(34, 197, 94, 0.5);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="amarillo"]:hover {
+    background: rgba(234, 179, 8, 0.15);
+    border-color: rgba(234, 179, 8, 0.5);
+    box-shadow: 0 8px 32px rgba(234, 179, 8, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="indigo"]:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="cian"]:hover {
+    background: rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="esmeralda"]:hover {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+    transform: translateY(-4px);
+}
+
+.tarjeta-testimonio[data-color="violeta"]:hover {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+    transform: translateY(-4px);
+}
+/*Fin de efectos de colores en las tarjetas de testimonio*/
+.tarjeta-testimonio p {
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.95rem;
-    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 12px;
     font-style: normal;
 }
 
+.tarjeta-testimonio cite {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-style: normal;
+}
+/*Sección final de contacto*/
 .final {
     background-color: rgb(255, 255, 255);
-    padding: 40px 30px;
-    border-radius: 12px;
+    padding: 40px 30px 80px;  
     text-align: center;
-    margin: 30px 0;
+    margin: 0;
 }
 
-.final:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px rgb(54, 66, 238);
-}
 
 .final p {
     color: black;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
 }
 
 .contactar {
@@ -363,3 +646,4 @@ footer > a:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(30,58,138,0.4);
 }
+/*Fin de sección final de contacto*/
