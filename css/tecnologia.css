@@ -1,16 +1,15 @@
 
 
 body {
-    background-color: rgb(27, 50, 87);
+    background-color: #0a0a0a;
 }
 
 main {
-    padding-bottom: 90px;
+    padding-bottom: 0;
     position: relative;
     z-index: 1;
 }
 
-/* Título en negro ENCIMA de la sección hero */
 .titulo-contenido {
     position: relative;
     z-index: 100;
@@ -51,107 +50,183 @@ main {
 
 
 .tipos {
-    max-width: 1200px;
-    margin: 55px auto 60px;
-    padding: 0 6%;
-    margin-bottom: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 80px 8% 80px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 .tipos > h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #ffffff;
-    margin-bottom: 50px;
-    font-weight: 700;
+    margin-bottom: 60px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.tipos > h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff 0%, #666666 100%);
 }
 
 .tipos-tecnologia {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tipos-tecnologia > h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 25px;
-    font-weight: 700;
-    border-left: 4px solid #007bff; 
-    padding-left: 20px;
+    margin-bottom: 35px;
+    font-weight: 800;
+    border-left: 5px solid #ffffff;
+    padding-left: 25px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
 }
 
 .apartados {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .caja {
-    background: rgb(255, 255, 255);
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 123, 255, 0.2);
-    transition: all 0.3s ease;
+    background: #000000;
+    padding: 35px;
+    border-radius: 2px;
+    border: 2px solid #333333;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.caja::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s;
+}
+
+.caja:hover::before {
+    left: 100%;
 }
 
 .caja:hover {
-    transform: translateY(-5px);
-    border-color: #007bff; 
-    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    border-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
 .caja h4 {
-    color: #007bff;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .caja p {
-    color: black;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .metodologia {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 6%;
-    margin-bottom: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 80px 8% 80px;
+    background: #ffffff;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.metodologia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #000000 0%, #666666 50%, #000000 100%);
 }
 
 .metodologia > h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 50px;
-    font-weight: 700;
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 70px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.metodologia > h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #000000 0%, #666666 100%);
 }
 
 .tipos-metodologia {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .opciones-metodologia {
-    background: rgb(255, 255, 255);
-    padding: 30px;
-    border-radius: 12px;
+    background: #000000;
+    padding: 40px 30px;
+    border-radius: 0;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
+    border: 2px solid #222222;
 }
 
 .opciones-metodologia::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #003d82, #007bff);
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    height: 8px;
+    border-radius: 2%;
+    background: linear-gradient(90deg, #ffffff 0%, #666666 100%);
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .opciones-metodologia:hover::before {
@@ -159,28 +234,34 @@ main {
 }
 
 .opciones-metodologia:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3); 
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-color: #ffffff;
 }
 
 .opciones-metodologia .numero {
     display: block;
-    font-size: 3rem;
-    font-weight: 800;
-    color: #007bff;
-    margin-bottom: 15px;
-    opacity: 0.9;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 20px;
+    opacity: 1;
+    letter-spacing: -2px;
+    line-height: 1;
 }
 
 .opciones-metodologia h3 {
-    color: black;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .opciones-metodologia p {
-    color: black;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 300;
 }
