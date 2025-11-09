@@ -1,100 +1,148 @@
-/* Estilos para la página de servicios - Temática consistente */
 
 body {
-    background-color: rgb(27, 50, 87);
+    background-color: #0a0a0a;
 }
 
 main {
-    padding-bottom: 80px;
+    padding-bottom: 0;
 }
 
 .encabezado {
-    background: linear-gradient(135deg, #000 0%, #003d82 100%);
+    background: #000000;
     color: white;
     text-align: center;
-    padding: 80px 20px;
-    margin-bottom: 50px;
-    animation: tituloEntrada 1s cubic-bezier(0.17, 0.84, 0.44, 1) both;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    padding: 100px 20px;
+    margin-bottom: 0;
+    position: relative;
 }
 
-@keyframes tituloEntrada {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.encabezado::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #000000 0%, #ffffff 50%, #000000 100%);
 }
-
 
 .encabezado h1 {
-    font-size: 50px;
-    margin-bottom: 15px;
-    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
 }
 
 .encabezado p {
-    font-size: 20px;
-    opacity: 0.95;
+    font-size: 1.4rem;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .contenido-servicios {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 6%;
+    width: 100%;
+    margin: 0;
+    padding: 80px 8%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    max-width: none;
 }
 
 .tipos-servicios {
-    background: rgb(255, 255, 255);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 30px;
-    transition: all 0.3s ease;
+    background: #000000;
+    border: 2px solid #333333;
+    border-radius: 0;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tipos-servicios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition: left 0.6s;
+}
+
+.tipos-servicios:hover::before {
+    left: 100%;
 }
 
 .tipos-servicios:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(30,58,138,0.3);
-    border-color: #2563eb;
+    transform: translateY(-10px) scale(1.02);
+    border-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
 .tipos-servicios h2 {
-    color: #2200ff;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.tipos-servicios h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.tipos-servicios:hover h2::after {
+    width: 100%;
 }
 
 .tipos-servicios p {
-    color: #000000;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .tipos-servicios ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .tipos-servicios ul li {
-    color: #000000;
-    padding: 8px 0;
-    padding-left: 25px;
+    color: #e5e5e5;
+    padding: 10px 0;
+    padding-left: 30px;
     position: relative;
+    font-size: 0.95rem;
+    font-weight: 400;
+    border-bottom: 1px solid #222222;
+}
+
+.tipos-servicios ul li:last-child {
+    border-bottom: none;
 }
 
 .tipos-servicios ul li::before {
-    content: "✓";
+    content: "▸";
     position: absolute;
     left: 0;
-    color: #3b82f6;
+    color: #ffffff;
     font-weight: bold;
+    font-size: 1.2rem;
 }
