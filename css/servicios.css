@@ -45,21 +45,36 @@ main {
     margin: 0;
     padding: 80px 8%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
     max-width: none;
+    margin-bottom: 50px;
+    
+}
+
+@media (max-width: 1200px) {
+    .contenido-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido-servicios {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tipos-servicios {
     background: #000000;
     border: 2px solid #333333;
     border-radius: 0;
-    padding: 40px;
+    padding: 50px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    min-height: 400px;
 }
 
 .tipos-servicios::before {
@@ -85,8 +100,8 @@ main {
 
 .tipos-servicios h2 {
     color: white;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -112,8 +127,8 @@ main {
 .tipos-servicios p {
     color: white;
     line-height: 1.8;
-    margin-bottom: 25px;
-    font-size: 1rem;
+    margin-bottom: 30px;
+    font-size: 1.15rem;
     font-weight: 300;
 }
 
@@ -125,10 +140,10 @@ main {
 
 .tipos-servicios ul li {
     color: white;
-    padding: 10px 0;
+    padding: 12px 0;
     padding-left: 30px;
     position: relative;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 400;
     border-bottom: 1px solid #222222;
 }
