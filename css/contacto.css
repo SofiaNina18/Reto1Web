@@ -164,6 +164,7 @@ main {
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.2s ease;
     border-radius: 12px;
+    margin-bottom: 50px;
 }
 
 .formulario-contacto::before {
