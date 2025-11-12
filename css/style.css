@@ -83,8 +83,8 @@ nav > ul > li:hover
     background-color: rgba(255,255,255,0.03);
 }
 
-.tienda:hover > .MenuNivel2,
-.language:hover > .MenuNivel2
+.tienda:hover > .menu-nivel-2,
+.idioma:hover > .menu-nivel-2
 {
     visibility: visible;
     opacity: 1;
@@ -92,7 +92,7 @@ nav > ul > li:hover
     transform: translateY(0);
 }
 
-.MenuNivel2
+.menu-nivel-2
 {
     visibility: hidden;
     opacity: 0;
@@ -112,14 +112,14 @@ nav > ul > li:hover
 }
 
 
-.MenuNivel2:hover {
+.menu-nivel-2:hover {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
 }
 
-.MenuNivel2 > li
+.menu-nivel-2 > li
 {
     width: 100%;               
     transition: background-color 0.18s ease;  
@@ -128,20 +128,20 @@ nav > ul > li:hover
     list-style: none;
 }
 
-.MenuNivel2 > li > a {
+.menu-nivel-2 > li > a {
     display: block;
     padding: 10px 14px;
     color: #fff;
     text-decoration: none;
 }
 
-.MenuNivel2 > li:hover {
+.menu-nivel-2 > li:hover {
     background-color: rgba(255,255,255,0.03);
 }
 
 
 .tienda > a::after,
-.language > a::after {
+.idioma > a::after {
     content: "▾";
     display: inline-block;
     margin-left: 8px;
