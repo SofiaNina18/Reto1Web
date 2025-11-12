@@ -10,7 +10,7 @@ main {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
     margin-bottom: 0;
     position: relative;
     overflow: hidden;
@@ -23,13 +23,12 @@ main {
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-    animation: shine 3s infinite;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.8s ease;
 }
 
-@keyframes shine {
-    0% { left: -100%; }
-    100% { left: 100%; }
+.portada-contacto:hover::before {
+    left: 100%;
 }
 
 .portada-contacto::after {
@@ -38,7 +37,7 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 5px;
     background: linear-gradient(90deg, 
         transparent 0%, 
         rgba(255, 255, 255, 0.3) 25%,

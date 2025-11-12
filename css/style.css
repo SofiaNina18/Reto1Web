@@ -22,7 +22,6 @@ header
     padding: 14px 80px;
     position: relative;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgb(54, 66, 238);
 }
 header img 
 {

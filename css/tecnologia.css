@@ -13,22 +13,55 @@ main {
 .titulo-contenido {
     position: relative;
     z-index: 100;
-    background-color: #000000;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
     width: 100%;
+    overflow: hidden;
+}
+
+.titulo-contenido::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.8s ease;
+    z-index: 1;
+}
+
+.titulo-contenido:hover::before {
+    left: 100%;
+}
+
+.titulo-contenido::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #000000 0%, #ffffff 50%, #000000 100%);
 }
 
 .titulo-contenido h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
 }
 
 .titulo-contenido p {
     font-size: 1.3rem;
     opacity: 0.95;
+    position: relative;
+    z-index: 2;
 }
 
 

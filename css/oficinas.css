@@ -7,12 +7,28 @@ main {
 }
 
 .portada-oficinas {
-    background: #000000;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 0;
     position: relative;
+    overflow: hidden;
+}
+
+.portada-oficinas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.8s ease;
+}
+
+.portada-oficinas:hover::before {
+    left: 100%;
 }
 
 .portada-oficinas::after {
@@ -31,6 +47,8 @@ main {
     font-weight: 900;
     letter-spacing: -1.5px;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
 .portada-oficinas p {
@@ -41,6 +59,8 @@ main {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
+    position: relative;
+    z-index: 1;
 }
 
 .introduccion-oficinas {
