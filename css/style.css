@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+/* Fuente para el footer y elementos UI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
 body {
     overflow-x: hidden;
     width: 100%;
@@ -240,7 +243,7 @@ nav > ul > li:hover
 
 /*Pie de página*/
 footer {
-    background-color: #3e3e3e;
+    background: linear-gradient(180deg, rgba(6,10,16,0.92), rgba(12,14,18,0.85));
     width: 100vw;
     max-width: 100%;
     position: fixed;
@@ -249,34 +252,58 @@ footer {
     right: 0;
     display: flex;
     flex-direction: row;
-    height: 65px;
-    justify-content: space-between;
+    height: 72px;
+    justify-content: center;
     align-items: center;
-    padding: 0 5%;
+    padding: 12px 6%;
     box-sizing: border-box;
     z-index: 1000;
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255,255,255,0.03);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
-footer > a {
+footer .footer-interior {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+footer .marca {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.6px;
     text-decoration: none;
-    color: white;
-    font-size: 17px;
+    font-size: 16px;
+}
+
+footer nav { display: flex; gap: 18px; align-items: center; }
+
+footer a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
     white-space: nowrap;
-    transition: color 0.3s ease;
-    flex: 0 0 auto;
+    transition: color 0.22s ease, transform 0.12s ease;
+    padding: 6px 8px;
+    border-radius: 6px;
 }
 
-footer > a:first-child {
-    margin-right: auto;
+footer a:hover {
+    color: #00e5ff; /* color de hover elegante (cian) */
+    transform: translateY(-2px);
+    background: rgba(0,229,255,0.04);
 }
 
-footer > a:last-child {
-    margin-left: auto;
+/* posiciones para pantallas pequeñas */
+@media (max-width: 800px) {
+    footer { height: auto; padding: 14px 6%; }
+    footer .footer-interior { flex-direction: column; gap: 10px; align-items: center; }
 }
 
-footer > a:hover {
-    color: #3b82f6;
-}
 /*Fin del pie de página*/
 
 
