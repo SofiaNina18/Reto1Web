@@ -77,6 +77,14 @@ nav > ul > li > a
     font-size: 22px;
 }
 
+nav > ul > li > a.activo,
+nav > ul > li.activo > a {
+    color: #00e5ff;
+    background: rgba(0,229,255,0.04);
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(0,229,255,0.06);
+}
+
 nav > ul > li:hover 
 {
     background-color: rgba(255,255,255,0.03);
