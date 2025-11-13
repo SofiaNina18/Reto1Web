@@ -93,9 +93,9 @@ main {
 .caja-info {
     position: absolute;
     width: 350px;
-    height: 250px;
+    height: 160px;
     padding: 24px 20px;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(6, 22, 117, 0.753);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -126,13 +126,6 @@ main {
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 255, 255, 0.1);
 }
 
-.icono-caja {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
-    display: block;
-    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
-}
-
 .caja-info h4 {
     font-size: 2rem;
     font-weight: 800;
@@ -148,37 +141,39 @@ main {
     margin-bottom: 12px;
 }
 
+.fondo
+{
+    width: 100%;
+    height: auto;
+}
+
 .metrica-caja {
     display: inline-block;
-    padding: 6px 14px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     font-size: 0.9rem;
-    letter-spacing: 1px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-style: italic;
 }
 
 .caja-arriba-izquierda {
-    top: 120px;
-    left: 60px;
+    top: 100px;
+    left: 300px;
     animation-delay: 0.2s;
 }
 
 .caja-arriba-derecha {
-    top: 120px;
-    right: 60px;
+    top: 100px;
+    right: 300px;
     animation-delay: 0.4s;
 }
 
 .caja-abajo-izquierda {
-    bottom: 80px;
-    left: 60px;
+    bottom: 200px;
+    left: 300px;
     animation-delay: 0.6s;
 }
 
 .caja-abajo-derecha {
-    bottom: 80px;
-    right: 60px;
+    bottom: 200px;
+    right: 300px;
     animation-delay: 0.8s;
 }
 
