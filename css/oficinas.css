@@ -42,7 +42,7 @@ main {
 }
 
 .portada-oficinas h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     font-weight: 900;
     letter-spacing: -1.5px;
@@ -52,7 +52,7 @@ main {
 }
 
 .portada-oficinas p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     opacity: 0.9;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -72,7 +72,7 @@ main {
 }
 
 .contenido-introduccion h2 {
-    font-size: 2.5rem;
+    font-size: 10rem;
     color: #000000;
     margin-bottom: 20px;
     font-weight: 900;
@@ -137,7 +137,7 @@ main {
 
 .encabezado-oficina h3 {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
     font-weight: 800;
     text-transform: uppercase;
@@ -149,7 +149,7 @@ main {
     background: transparent;
     color: #ffffff;
     padding: 8px 20px;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 600;
     border: 1px solid #666666;
     text-transform: uppercase;
@@ -168,7 +168,7 @@ main {
 }
 
 .elemento-info .icono {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     flex-shrink: 0;
 }
 
@@ -176,7 +176,7 @@ main {
     color: #000000;
     display: block;
     margin-bottom: 8px;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -185,7 +185,7 @@ main {
 .elemento-info p {
     color: #333333;
     line-height: 1.8;
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     margin: 0;
     font-weight: 300;
 }
@@ -211,7 +211,7 @@ main {
 
 .llamada-accion-oficinas h2 {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -224,7 +224,7 @@ main {
 
 .llamada-accion-oficinas p {
     color: #cccccc;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 40px;
     font-weight: 300;
 }
@@ -236,7 +236,7 @@ main {
     padding: 18px 50px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 2px solid #ffffff;
     text-transform: uppercase;
@@ -288,13 +288,13 @@ main {
 }
 
 .icono-info {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
 .caja-info h3 {
     color: #000000;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     font-weight: 800;
     text-transform: uppercase;
@@ -304,6 +304,6 @@ main {
 .caja-info p {
     color: #333333;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
