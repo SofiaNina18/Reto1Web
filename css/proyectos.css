@@ -177,12 +177,6 @@ main {
     transition: all 0.3s ease;
 }
 
-.etiqueta-tecnologia:hover {
-    background: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
-}
-
 .estadisticas {
     width: 100%;
     margin: 0;
